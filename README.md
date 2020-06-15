@@ -1,2 +1,2 @@
-# Challenges
-Challenges for Lakshya CTF Final Round
+# Challenge Write-ups
+Challenge write-ups for Lakshya CTF 2020.
