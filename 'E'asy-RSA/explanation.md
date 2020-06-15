@@ -13,6 +13,8 @@ Something is really small here. Don't forget to convert the obtained plaintext (
 
 ## Explanation:
 
+By RSA algorithm,
+
 ```
 ct = (pt)^e modn
 e = 3
