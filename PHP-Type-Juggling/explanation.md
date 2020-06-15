@@ -11,4 +11,6 @@ Since the password is compared to a hash that starts with '0e', PHP interprets t
 
 The trick here is to find a string that generates a hash that begins with '0e' and is of the same hashing algorithm as the supplied hash. 
 
+The string is: `aaroZmOk`
+
 Flag: `lakshya_CTF{7yp3_ju66l1n6_5cr3w3d_up}`
