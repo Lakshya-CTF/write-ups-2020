@@ -9,7 +9,7 @@ Can you find the plaintext?
 Please note: The flag is in the format lakshya_CTF{plaintext}. If plaintext is "rsa", then flag is lakshya_CTF{rsa}
 
 ## Hint: 
-Something is really small here. Don't forget to convert the obtained plaintext (in decimal format) to its hexadecimal equivalent before converting it to ascii. 
+Something is really small here. Don't forget to convert the obtained plaintext (in decimal format) to its hexadecimal equivalent before converting it to ASCII. 
 
 ## Explanation:
 
@@ -32,8 +32,8 @@ print(hex(root))
 
 ```
 
-Output: 0x736d616c6c45
+Output: `0x736d616c6c45`
 
-ascii of `0x736d616c6c45` is `smallE`
+ASCII of `0x736d616c6c45` is `smallE`
 
 Therefore flag is `lakshya_CTF{smallE}`
