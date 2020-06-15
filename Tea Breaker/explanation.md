@@ -6,22 +6,22 @@ Doing an NMap scan on the box with ```nmap -sV -sC -oA teabreaker machine-ip``` 
 
 Cloning this repository with ```git clone url```, we check the git commit history. 
 
-![image-20200615094246548](/Users/chaitanyarahalkar/Downloads/Challenges/Tea Breaker/image-20200615094246548.png)
+<img src="image-20200615094246548.png" height="500" width="800"></img>
 
 A suspicious commit comment shows that some credentials were exposed in the previous commits that were hidden via environment variables in the master branch's head commit. Checking out the previous commit (With cooment - "Add runner code") with ```git checkout d6bcd82d59a3a21221e057c2041f361fd35e1871``` we view the ```grab_creds.py``` file.
 
-![image-20200615094557284](/Users/chaitanyarahalkar/Downloads/Challenges/Tea Breaker/image-20200615094557284.png)
+<img src="image-20200615094557284.png" height="500" width="800"></img>
 
 We saw a service running on port 8000, but it required authentication. Trying these credentials on that page , we get in. A direct command prompt is visible. We read the user flag with ```cat flag.txt```
 
-![image-20200615094936146](/Users/chaitanyarahalkar/Downloads/Challenges/Tea Breaker/image-20200615094936146.png)
+<img src="image-20200615094936146.png" height="500" width="800"></img>
 
 
 
 For the root flag, we perform Linux enumeration using [Linenum](https://github.com/rebootuser/LinEnum). This shows that the SUID bit on Curl is set.
 
-![image-20200615095401302](/Users/chaitanyarahalkar/Downloads/Challenges/Tea Breaker/image-20200615095401302.png)
+<img src="image-20200615095401302.png" height="500" width="800"></img>
 
 Checking on (GTFOBins)[https://gtfobins.github.io], we see a techinque to read priviledged content on the system using the file protocol. We use the command ```curl file:///root/flag.txt -o flag.txt``` to read the root flag.
 
-![image-20200615095619928](/Users/chaitanyarahalkar/Downloads/Challenges/Tea Breaker/image-20200615095619928.png)
+<img src="image-20200615095619928.png" height="500" width="800"></img>
